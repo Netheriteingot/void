@@ -7,7 +7,7 @@ function clickvoid() {
     if (tp < 4999) {
         viod += Math.round(b1 + 1);
         buton = "Click this to get +" + nt(b1 + 1) + " void.";
-        if (Clicks < 4000) Clicks++;
+        if (Clicks < 2000) Clicks++;
     }
     else {
         buton = "This button is useless.";
@@ -50,7 +50,7 @@ function buyq2() {
     UpdQ2();
 }
 setInterval(function () {
-    viod += b1 * Math.pow(2.1 + (2e-4) * Clicks - (5e-4) * tp, b2) / 20;
+    viod += b1 * Math.pow(2.1 + (4e-4) * Clicks - (5e-4) * tp, b2) / 20;
     if (End == 1 && tp < 5800) tp++;
     if (End == 1 && tp < 500) viod /= 1.0006;
     else if (End == 1 && tp < 1000) viod /= 1.003;

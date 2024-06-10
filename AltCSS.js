@@ -109,10 +109,10 @@ setInterval(function () {
     curhead = "You have " + nt(viod.toFixed(2));
     if (End == 0) curhead += " void.";
     else curhead += randstr(" void.");
-    t1 = "You have clicked " + nt(Clicks) + " times, increasing your multiplier base by " + (Clicks * 2e-4).toFixed(4) + ".";
+    t1 = "You have clicked " + nt(Clicks) + " times, increasing your multiplier base by " + (Clicks * 4e-4).toFixed(4) + ".";
     if (End == 1) t1 += "<br>Due to the Big Rip, your multiplier base receives a time-based debuff of " + (tp * 5e-4).toFixed(4) + ".";
-    t2 = "You receive " + nt((b1 * Math.pow(2.1 + (2e-4) * Clicks - (5e-4) * tp, b2)).toFixed(4)) + " void per second.";
-    t3 = "Your multipliers gives a " + nt((Math.pow(2.1 + (2e-4) * Clicks - (5e-4) * tp, b2)).toFixed(4)) + "x boost to your production.";
+    t2 = "You receive " + nt((b1 * Math.pow(2.1 + (4e-4) * Clicks - (5e-4) * tp, b2)).toFixed(4)) + " void per second.";
+    t3 = "Your multipliers gives a " + nt((Math.pow(2.1 + (4e-4) * Clicks - (5e-4) * tp, b2)).toFixed(4)) + "x boost to your production.";
     if (End_Level == 0) curnews = "You want to make some emptiness.";
     if (End_Level == 1) curnews = "You have a bit of emptiness, but you want more.";
     if (End_Level == 2) curnews = "As the multipliers roamed, your surroundings seems to become cleaner.";
