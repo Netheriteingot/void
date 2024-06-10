@@ -14,21 +14,21 @@ function clickvoid() {
     }
     UpdButton();
 }
-function randstr(ori){
-    var t=Math.random();
-    if(t<0.95)return ori;
-    else{
-        t=Math.random()*10;
-        if(t<1)return "Empty";
-        if(t<2)return "Void";
-        if(t<3)return "Dakarlocat";
-        if(t<4)return "Death";
-        if(t<5)return "Universe";
-        if(t<6)return "Filter";
-        if(t<7)return "Clean";
-        if(t<8)return "GO TO HELL";
-        if(t<9)return "Voiddddddddddddddd";
-        if(t<10)return "Glitter, Vomitus and Neon";
+function randstr(ori) {
+    var t = Math.random();
+    if (t < 0.95) return ori;
+    else {
+        t = Math.random() * 10;
+        if (t < 1) return "Empty";
+        if (t < 2) return "Void";
+        if (t < 3) return "Dakarlocat";
+        if (t < 4) return "Death";
+        if (t < 5) return "Universe";
+        if (t < 6) return "Filter";
+        if (t < 7) return "Clean";
+        if (t < 8) return "GO TO HELL";
+        if (t < 9) return "Voiddddddddddddddd";
+        if (t < 10) return "Glitter, Vomitus and Neon";
     }
 }
 function buyq1() {
@@ -36,7 +36,7 @@ function buyq1() {
         viod -= q1cost;
         b1++;
     }
-    q1cost = 30 * Math.pow(2.5, b1);
+    q1cost = 30 * Math.pow(2.4, b1);
     q1c = "Space Compressor<br>You have " + nt(b1) + ".<br>Buy one for " + nt(q1cost) + " void.";
     UpdQ1();
 }
@@ -50,7 +50,7 @@ function buyq2() {
     UpdQ2();
 }
 setInterval(function () {
-    viod += b1 * Math.pow(2.1 + (4e-4) * Clicks - (5e-4) * tp, b2) / 20;
+    viod += b1 * b1 * Math.pow(2.1 + (4e-4) * Clicks - (5e-4) * tp, b2) / 20;
     if (End == 1 && tp < 5800) tp++;
     if (End == 1 && tp < 500) viod /= 1.0006;
     else if (End == 1 && tp < 1000) viod /= 1.003;
