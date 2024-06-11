@@ -77,6 +77,8 @@ function UpdTmp() {
     if (Math.random() > 0.15 || End == 0) tmp1x = tmp1y = 0;
     if (End <= 1) document.getElementById("tmp3").innerHTML = "<p id=\"temp3\" style=\" font-size: 15px; height: 50px; width: 300px; text-align: center; position: absolute; top: " + (355 + tmp1y) + "px; left: " + (window.innerWidth / 2 + 50 + tmp1x) + "px; color: white; \"></p>";
     if (End <= 1) SetiH("temp3", t3);
+    if (End <= 1) document.getElementById("tmp4").innerHTML = "<p id=\"temp4\" style=\" border-style: groove; border-color: white; font-size: 20px; height: 30px; padding:10px 0; width: 100%; text-align: center; position: fixed; bottom:0; left:0; color: white; \"></p>";
+    if (End <= 1) SetiH("temp4", t4);
 }
 var meow = "";
 setInterval(function () {
@@ -84,7 +86,7 @@ setInterval(function () {
     if (j < 4) meow = "A work of art by l319836";
     if (j < 3) meow = "Special thanks to Fallen_Cat for inspiring me.";
     if (j < 2) meow = "Special thanks to yhvr and Galaxy for providing the platform.";
-    if (j < 1) meow = "Special thanks to Sparkle_7 for testing.";
+    if (j < 1) meow = "Special thanks to -tlyforever- for testing.";
     if (End < 2) meow = "";
     SaveItem("End", End);
     SaveItem("viod", viod);
@@ -96,6 +98,13 @@ setInterval(function () {
 }, 1000);
 var clear = 0;
 var rand = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-_=+[]{}|;:\",./<>?`";
+function Calc() {
+    var ret=(Math.log10(viod + 1) / 0.8).toFixed(2);
+    if(Math.random()<0.8)return ret;
+    else if(Math.random()<0.5)return nt(Math.pow(10,Math.random()*300));
+    else if(Math.random()<0.5)return (Math.pow(10,Math.random()*300)).toPrecision(Math.floor(Math.random()*15)+1);
+    else return randstr((Math.pow(10,Math.random()*300)).toPrecision(Math.floor(Math.random()*15)+1));
+}
 setInterval(function () {
     if (clear == 1) {
         End = 0;
@@ -113,6 +122,7 @@ setInterval(function () {
     if (End == 1) t1 += "<br>Due to the Big Rip, your multiplier base receives a time-based debuff of " + (tp * 5e-4).toFixed(4) + ".";
     t2 = "You receive " + nt((b1 * b1 * Math.pow(2.1 + (4e-4) * Clicks - (5e-4) * tp, b2)).toFixed(4)) + " void per second.";
     t3 = "Your multipliers gives a " + nt((Math.pow(2.1 + (4e-4) * Clicks - (5e-4) * tp, b2)).toFixed(4)) + "x boost to your production.";
+    t4="Progress: "+(Calc())+"%";
     if (End_Level == 0) curnews = "You want to make some emptiness.";
     if (End_Level == 1) curnews = "You have a bit of emptiness, but you want more.";
     if (End_Level == 2) curnews = "As the multipliers roamed, your surroundings seems to become cleaner.";
