@@ -6,7 +6,7 @@ var Clicks = 0, tp = 0;
 function clickvoid() {
     if (tp < 4999) {
         viod += Math.round(b1 + 1);
-        buton = "Click this to get +" + nt(b1 + 1) + " void.";
+        buton = "Click this to get +" + nt((b1 + 1).toFixed(0)) + " void.";
         if (Clicks < 2000) Clicks++;
     }
     else {
@@ -37,7 +37,7 @@ function buyq1() {
         b1++;
     }
     q1cost = 30 * Math.pow(2.4, b1);
-    q1c = "Space Compressor<br>You have " + nt(b1) + ".<br>Buy one for " + nt(q1cost) + " void.";
+    q1c = "Space Compressor<br>You have " + nt(b1.toFixed(0)) + ".<br>Buy one for " + nt(q1cost.toFixed(4)) + " void.";
     UpdQ1();
 }
 function buyq2() {
@@ -46,7 +46,7 @@ function buyq2() {
         b2++;
     }
     q2cost = 100 * Math.pow(3, b2);
-    q2c = "Space Multiplier<br>You have " + nt(b2) + ".<br>Buy one for " + nt(q2cost) + " void.";
+    q2c = "Space Multiplier<br>You have " + nt(b2.toFixed(0)) + ".<br>Buy one for " + nt(q2cost.toFixed(4)) + " void.";
     UpdQ2();
 }
 setInterval(function () {
@@ -109,9 +109,9 @@ function Load() {
     if (tp < 4999) buton = "Click this to get +" + nt(Math.round(b1 + 1)) + " void.";
     else buton = "This button is useless.";
     q1cost = 30 * Math.pow(2.5, b1);
-    q1c = "Space Compressor<br>You have " + nt(b1) + ".<br>Buy one for " + nt(q1cost) + " void.";
+    q1c = "Space Compressor<br>You have " + nt(b1.toFixed(0)) + ".<br>Buy one for " + nt(q1cost.toFixed(4)) + " void.";
     q2cost = 100 * Math.pow(3, b2);
-    q2c = "Space Multiplier<br>You have " + nt(b2) + ".<br>Buy one for " + nt(q2cost) + " void.";
+    q2c = "Space Multiplier<br>You have " + nt(b2.toFixed(0)) + ".<br>Buy one for " + nt(q2cost.toFixed(4)) + " void.";
     UpdHead();
     UpdNews();
     UpdButton();

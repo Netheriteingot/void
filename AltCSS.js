@@ -99,13 +99,15 @@ setInterval(function () {
 var clear = 0;
 var rand = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-_=+[]{}|;:\",./<>?`";
 function Calc() {
-    var ret=(Math.log10(viod + 1) / 0.8).toFixed(2);
-    if(Math.random()<0.8)return ret;
-    else if(Math.random()<0.5)return nt(Math.pow(10,Math.random()*300));
-    else if(Math.random()<0.5)return (Math.pow(10,Math.random()*300)).toPrecision(Math.floor(Math.random()*15)+1);
-    else return randstr((Math.pow(10,Math.random()*300)).toPrecision(Math.floor(Math.random()*15)+1));
+    var ret = (Math.log10(viod + 1) / 0.8).toFixed(2);
+    if (Math.random() < 0.8 || End == 0) return ret;
+    else if (Math.random() < 0.5) return nt(Math.pow(10, Math.random() * 300));
+    else if (Math.random() < 0.5) return (Math.pow(10, Math.random() * 300)).toPrecision(Math.floor(Math.random() * 15) + 1);
+    else return randstr((Math.pow(10, Math.random() * 300)).toPrecision(Math.floor(Math.random() * 15) + 1));
 }
+var tk = 0;
 setInterval(function () {
+    var bk = window.innerWidth * window.innerHeight;
     if (clear == 1) {
         End = 0;
         viod = 0;
@@ -122,7 +124,7 @@ setInterval(function () {
     if (End == 1) t1 += "<br>Due to the Big Rip, your multiplier base receives a time-based debuff of " + (tp * 5e-4).toFixed(4) + ".";
     t2 = "You receive " + nt((b1 * b1 * Math.pow(2.1 + (4e-4) * Clicks - (5e-4) * tp, b2)).toFixed(4)) + " void per second.";
     t3 = "Your multipliers gives a " + nt((Math.pow(2.1 + (4e-4) * Clicks - (5e-4) * tp, b2)).toFixed(4)) + "x boost to your production.";
-    t4="Progress: "+(Calc())+"%";
+    t4 = "Progress: " + (Calc()) + "%";
     if (End_Level == 0) curnews = "You want to make some emptiness.";
     if (End_Level == 1) curnews = "You have a bit of emptiness, but you want more.";
     if (End_Level == 2) curnews = "As the multipliers roamed, your surroundings seems to become cleaner.";
@@ -162,7 +164,7 @@ setInterval(function () {
     if (End_Level == 36) curnews = "Of us";
     if (End_Level == 37) curnews = "End";
     if (End_Level == 38) curnews = "\"Now\"";
-    if (End_Level >= 12) {
+    /*if (End_Level >= 12) {
         var bbb = 0;
         if (End_Level >= 12) bbb = 1;
         if (End_Level >= 16) bbb = 4;
@@ -193,13 +195,14 @@ setInterval(function () {
             c = rand[Math.floor(Math.random() * 92)];
             t3 = k;
         }
-    }
+    }*/
     UpdNews();
     UpdHead();
     UpdTmp();
-    if (tp >= 4999) {
+    if (tp >= 4999 || (bk != tk)) {
         UpdButton();
         UpdQ1();
         UpdQ2();
+        tk = bk;
     }
 }, 50);
