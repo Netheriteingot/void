@@ -1,26 +1,58 @@
 <!DOCTYPE html>
 <html style="background-color: black;">
-	<head>
-		<meta charset="utf-8">
-		<title>Void by l319836</title>
-		<link rel="icon" href="pic/test.png">
-		<script src="module.js" ></script>
-		<script src="Load.js" ></script>
-		<script src="AltCSS.js" ></script>
-		<script src="End.js" ></script>
-		<script src="notation.js" ></script>
-	</head>
-	<body onload="Load()">
-		<main id="main">
-			<div id="news_back"></div>
-			<div id="head_back"></div>
-			<div id="tmp1"></div>
-			<div id="tmp2"></div>
-			<div id="tmp3"></div>
-			<div id="tmp4" style="text-align: center;"></div>
-			<div id="button_back" onclick="clickvoid()" style="text-align: center;"></div>
-			<button id="q1d" onclick="buyq1()" style="text-align: center;"></div>
-			<button id="q2d" onclick="buyq2()" style="text-align: center;"></div>
-		</main>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>Void by l319836</title>
+    <link rel="icon" href="pic/test.png">
+    <script src="module.js"></script>
+    <script src="Load.js"></script>
+    <script src="AltCSS.js"></script>
+    <script src="End.js"></script>
+    <script src="notation.js"></script>
+    <style>
+        .no-select {
+            user-select: none;
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
+        /* Hide the small buttons by making them pitch black */
+        #q1d, #q2d {
+            background-color: black;
+            border: none;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        /* Make the upper left corner unclickable */
+        .unclickable-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+        }
+        /* Ensure the big buttons are still displayed correctly */
+        #button_back, #q1d, #q2d {
+            display: block;
+        }
+    </style>
+</head>
+<body onload="Load()">
+    <main id="main">
+        <div id="news_back" class="no-select"></div>
+        <div id="head_back" class="no-select"></div>
+        <div id="tmp1" class="no-select"></div>
+        <div id="tmp2" class="no-select"></div>
+        <div id="tmp3" class="no-select"></div>
+        <div id="tmp4" class="no-select" style="text-align: center;"></div>
+        <div id="button_back" class="no-select" onclick="clickvoid()" style="text-align: center;"></div>
+        <button id="q1d" class="no-select" onclick="buyq1()" style="text-align: center;">Click me</button>
+        <button id="q2d" class="no-select" onclick="buyq2()" style="text-align: center;">Click me</button>
+        <div class="unclickable-area"></div>
+    </main>
+</body>
 </html>
