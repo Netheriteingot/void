@@ -1,0 +1,32 @@
+.no-select {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/* Hide the small buttons by making them pitch black */
+#q1d, #q2d {
+    background-color: black;
+    border: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Make the upper left corner unclickable */
+.unclickable-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+}
+
+/* Ensure the big buttons are still displayed correctly */
+#button_back, #q1d, #q2d {
+    display: block;
+}

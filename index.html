@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html style="background-color: black;">
-	<head>
-		<meta charset="utf-8">
-		<title>Void by l319836</title>
-		<link rel="icon" href="pic/test.png">
-		<script src="module.js" ></script>
-		<script src="Load.js" ></script>
-		<script src="AltCSS.js" ></script>
-		<script src="End.js" ></script>
-		<script src="notation.js" ></script>
-	</head>
-	<body onload="Load()">
-		<main id="main">
-			<div id="news_back"></div>
-			<div id="head_back"></div>
-			<div id="tmp1"></div>
-			<div id="tmp2"></div>
-			<div id="tmp3"></div>
-			<div id="tmp4" style="text-align: center;"></div>
-			<div id="button_back" onclick="clickvoid()" style="text-align: center;"></div>
-			<button id="q1d" onclick="buyq1()" style="text-align: center;"></div>
-			<button id="q2d" onclick="buyq2()" style="text-align: center;"></div>
-		</main>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>Void by l319836</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="pic/test.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="module.js"></script>
+    <script src="Load.js"></script>
+    <script src="AltCSS.js"></script>
+    <script src="End.js"></script>
+    <script src="notation.js"></script>
+    <script src="nozoom.js" defer></script> 
+</head>
+<body onload="Load()">
+    <main id="main">
+        <div id="news_back" class="no-select"></div>
+        <div id="head_back" class="no-select"></div>
+        <div id="tmp1" class="no-select"></div>
+        <div id="tmp2" class="no-select"></div>
+        <div id="tmp3" class="no-select"></div>
+        <div id="tmp4" class="no-select" style="text-align: center;"></div>
+        <div id="button_back" class="no-select" onclick="clickvoid()" style="text-align: center;"></div>
+        <button id="q1d" class="no-select" onclick="buyq1()" style="text-align: center;">Click me</button>
+        <button id="q2d" class="no-select" onclick="buyq2()" style="text-align: center;">Click me</button>
+        <div class="unclickable-area"></div>
+    </main>
+</body>
 </html>
